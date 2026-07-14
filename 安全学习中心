@@ -1,0 +1,322 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bunge 安全学习中心</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:20px;
+    background:#f3f5f7;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+.header{
+    text-align:center;
+    background:#005a9c;
+    color:white;
+    padding:20px;
+    border-radius:10px;
+}
+
+.card{
+    background:white;
+    margin-top:15px;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.topic{
+    margin:10px 0;
+}
+
+button{
+    background:#0078d4;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:6px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#005a9c;
+}
+
+.section{
+    display:none;
+    margin-top:20px;
+}
+
+.section h2{
+    color:#005a9c;
+}
+
+img{
+    max-width:100%;
+    border-radius:8px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+    <h1>Bunge 安全学习中心</h1>
+    <p>请选择需要学习的主题</p>
+</div>
+
+<div class="card">
+
+<label class="topic">
+<input type="checkbox" id="loto">
+LOTO 上锁挂牌
+</label>
+
+<br>
+
+<label class="topic">
+<input type="checkbox" id="height">
+高空作业
+</label>
+
+<br>
+
+<label class="topic">
+<input type="checkbox" id="confined">
+受限空间
+</label>
+
+<br>
+
+<label class="topic">
+<input type="checkbox" id="lifting">
+吊装作业
+</label>
+
+<br>
+
+<label class="topic">
+<input type="checkbox" id="mobile">
+移动设备
+</label>
+
+<br>
+
+<label class="topic">
+<input type="checkbox" id="grain">
+散装物料与仓储
+</label>
+
+<br>
+
+<label class="topic">
+<input type="checkbox" id="hose">
+高压软管
+</label>
+
+<br>
+
+<label class="topic">
+<input type="checkbox" id="general">
+通用安全
+</label>
+
+<br><br>
+
+<button onclick="showContent()">
+显示学习内容
+</button>
+
+</div>
+
+<!-- LOTO -->
+
+<div class="card section" id="content_loto">
+
+<h2>LOTO 上锁挂牌</h2>
+
+<p>
+在维护、清洗、检修设备前，
+必须完成隔离、上锁、挂牌和验证。
+</p>
+
+<ul>
+<li>确认危险能源</li>
+<li>执行隔离</li>
+<li>个人锁管理</li>
+<li>验证零能量状态</li>
+</ul>
+
+</div>
+
+<!-- 高空 -->
+
+<div class="card section" id="content_height">
+
+<h2>高空作业</h2>
+
+<p>
+1.8米以上作业必须评估坠落风险。
+</p>
+
+<ul>
+<li>使用护栏</li>
+<li>使用安全带</li>
+<li>确认锚点</li>
+<li>制定救援方案</li>
+</ul>
+
+</div>
+
+<!-- 受限空间 -->
+
+<div class="card section" id="content_confined">
+
+<h2>受限空间</h2>
+
+<ul>
+<li>许可证审批</li>
+<li>气体检测</li>
+<li>监护人员</li>
+<li>救援设备</li>
+</ul>
+
+</div>
+
+<!-- 吊装 -->
+
+<div class="card section" id="content_lifting">
+
+<h2>吊装作业</h2>
+
+<ul>
+<li>吊装计划</li>
+<li>合格司索工</li>
+<li>禁区管理</li>
+<li>天气评估</li>
+</ul>
+
+</div>
+
+<!-- 移动设备 -->
+
+<div class="card section" id="content_mobile">
+
+<h2>移动设备</h2>
+
+<ul>
+<li>系安全带</li>
+<li>限速管理</li>
+<li>人车分离</li>
+<li>叉车检查</li>
+</ul>
+
+</div>
+
+<!-- 散装仓储 -->
+
+<div class="card section" id="content_grain">
+
+<h2>散装物料与仓储</h2>
+
+<ul>
+<li>防掩埋</li>
+<li>仓内作业审批</li>
+<li>LOTO要求</li>
+<li>连续监测</li>
+</ul>
+
+</div>
+
+<!-- 高压软管 -->
+
+<div class="card section" id="content_hose">
+
+<h2>高压软管</h2>
+
+<ul>
+<li>固定器检查</li>
+<li>减压后拆除</li>
+<li>使用防甩装置</li>
+<li>定期检查</li>
+</ul>
+
+</div>
+
+<!-- 通用安全 -->
+
+<div class="card section" id="content_general">
+
+<h2>通用安全</h2>
+
+<ul>
+<li>滑倒绊倒跌倒预防</li>
+<li>PPE正确使用</li>
+<li>应急响应</li>
+<li>事故和未遂报告</li>
+</ul>
+
+</div>
+
+</div>
+
+<script>
+
+function showContent(){
+
+let mappings = [
+"loto",
+"height",
+"confined",
+"lifting",
+"mobile",
+"grain",
+"hose",
+"general"
+];
+
+mappings.forEach(function(item){
+
+let checkbox =
+document.getElementById(item);
+
+let content =
+document.getElementById("content_"+item);
+
+if(checkbox.checked){
+content.style.display="block";
+}
+else{
+content.style.display="none";
+}
+
+});
+
+window.scrollTo({
+top:300,
+behavior:'smooth'
+});
+
+}
+
+</script>
+
+</body>
+</html>
